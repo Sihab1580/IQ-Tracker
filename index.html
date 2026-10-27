@@ -4,12 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>IQ Compliance & RR Tracker | Madhabpur</title>
+<!-- Google Fonts & FontAwesome for proper font and icon rendering -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <style>
 :root{--bg:#f4f7fc;--card:#ffffff;--ink:#0f172a;--muted:#64748b;--line:#e2e8f0;--blue:#1d4ed8;--navy:#0f172a;--red:#ef4444;--green:#10b981;--amber:#f59e0b;--shadow:0 4px 20px rgba(15,23,42,.05)}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,Segoe UI,Arial,sans-serif}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 'Plus Jakarta Sans',sans-serif; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased;}
 .app{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
 .sidebar{background:var(--navy);color:#f8fafc;padding:24px 18px;display:flex;flex-direction:column}
 .brand{display:flex;align-items:center;gap:12px;padding:0 8px 24px;border-bottom:1px solid #1e293b}
@@ -112,7 +115,7 @@ td{font-size:13px}tbody tr:hover{background:#f8fafc}tbody tr:last-child td{borde
         </div>
         <div style="flex:1">
           <strong>Upload Excel / CSV Report</strong>
-          <small>Upload your report file to analyze live data instantly.</small>
+          <small>Upload your report file to analyze live data instantly with UTF-8 encoding support.</small>
         </div>
         <input type="file" id="fileInput" accept=".xlsx, .xls, .csv, text/csv">
         <button class="btn primary" id="uploadBtn">Process Report</button>
@@ -492,7 +495,7 @@ $("resetViewBtn").addEventListener("click", () => { $("salesmanFilter").value = 
 $("sampleBtn").addEventListener("click", () => {
   rows = [
     {code:"18", name:"Md Mahmudur Rahman", target:1627.12, ach:878},
-    {code:"05", name:"Anupam Chandra Paul", target:1428.03, ach:665},
+    {code:"05", name:"Anupam Chandra Paul", target:1428.03,-ach:665},
     {code:"50", name:"MD ashraful islam jems", target:1391.48, ach:641},
     {code:"20", name:"Kanai Banik", target:1158.42, ach:626},
     {code:"12", name:"Md Harun Mia", target:1806.86, ach:596}
